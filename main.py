@@ -23,12 +23,12 @@ from fastapi.templating import Jinja2Templates
 # html 틀이 있는 폴더 위치
 templates = Jinja2Templates(directory="templates/")
 
-# @app.get("/index")
-# async def index(request:Request):
-#     # return {"message": "gocolab World!"}
-#     # html 틀로 호출
-#     return templates.TemplateResponse("index.html"
-#                                       ,{'request':request})
+@app.get("/index")
+async def index(request:Request):
+    # return {"message": "gocolab World!"}
+    # html 틀로 호출
+    return templates.TemplateResponse("index.html"
+                                      ,{'request':request})
     
 @app.get("/")
 async def root(request:Request):
