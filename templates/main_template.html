@@ -12,12 +12,19 @@
 <body>
     <nav class="container">
         <ul class="nav justify-content-center">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://192.168.10.238:8000/">Home</a>
+            <li>
+                <a class="nav-link" href="#">Main</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#"
-                data-bs-toggle="dropdown">Gadjets</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="/homes/standards">standards</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gadjets</a>
                 <ul class="dropdown-menu">
                     <li>
                         <a class="dropdown-item" href="/gadgets/buttons">buttons</a>
@@ -34,8 +41,7 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#"
-                data-bs-toggle="dropdown">positionings</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">positionings</a>
                 <ul class="dropdown-menu">
                     <li>
                         <a class="dropdown-item" href="/positionings/forms">forms</a>

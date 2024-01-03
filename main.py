@@ -14,7 +14,7 @@ app.add_middleware(
 from routes.homes import router as event_router
 from routes.gadgets import router as gadgets
 from routes.positionings import router as positionings
-app.include_router(event_router, prefix='/home')
+app.include_router(event_router, prefix='/homes')
 app.include_router(gadgets, prefix='/gadgets')
 app.include_router(positionings, prefix='/positionings')
 
