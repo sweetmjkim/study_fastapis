@@ -15,7 +15,7 @@ async def insert(request:Request):
                                       , context={"request":request})
 
 # 회원 가입 /users/insert -> users/login.html
-@router.get("/insert")
+@router.get("/inserts")
 async def insert(request:Request):
     pass    # biz
     return templates.TemplateResponse(name="users/logins.html"
