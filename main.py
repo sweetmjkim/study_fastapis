@@ -14,9 +14,12 @@ app.add_middleware(
 from routes.homes import router as event_router
 from routes.gadgets import router as gadgets
 from routes.positionings import router as positionings
-app.include_router(event_router, prefix='/homes')
-app.include_router(gadgets, prefix='/gadgets')
-app.include_router(positionings, prefix='/positionings')
+from routes.users import router as users_router
+
+app.include_router(event_router, prefix="/homes")
+app.include_router(gadgets, prefix="/gadgets")
+app.include_router(positionings, prefix="/positionings")
+app.include_router(users_router, prefix="/users")
 
 from fastapi import Request
 from fastapi.templating import Jinja2Templates
