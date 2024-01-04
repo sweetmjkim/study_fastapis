@@ -46,3 +46,11 @@ async def insert(request:Request):
     print(dict_details)
     return templates.TemplateResponse(name="users/lists.html"
                                       , context={"request":request})
+    
+# 회원 리스트 /users/list -> users/lists.html
+@router.post("/delete")
+async def insert(request:Request):
+    dict_details = dict(request.query_params)
+    print(dict_details)
+    return templates.TemplateResponse(name="users/lists.html"
+                                      , context={"request":request})
