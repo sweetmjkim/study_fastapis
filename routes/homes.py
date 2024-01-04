@@ -13,6 +13,12 @@ templates = Jinja2Templates(directory="templates/")
 #     # return {"message": "home World!"}
 #     html = "<body> <h2>It's Home.</h2> </body>"
 #     return html
+
+@router.get("/main")
+async def root(request:Request):
+    return templates.TemplateResponse(name="main_template.html"
+                                      , context={"request":request})
+
 @router.get("/standards")
 async def root(request:Request):
     return templates.TemplateResponse(name="homes/standards.html"
