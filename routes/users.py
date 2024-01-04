@@ -15,7 +15,7 @@ async def insert(request:Request):
                                       , context={"request":request})
 
 # 회원 가입 Login /users/insert -> users/login.html
-@router.get("/logins")    # 주로 2단계까지만 연결
+@router.post("/logins")    # 주로 2단계까지만 연결
 async def insert(request:Request):
     dict_details = dict(request.query_params)
     print(dict_details)
