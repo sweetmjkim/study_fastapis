@@ -14,7 +14,7 @@ templates = Jinja2Templates(directory="templates/")
 #     html = "<body> <h2>It's Home.</h2> </body>"
 #     return html
 @router.get("/standards")
-async def homes(request:Request):
+async def root(request:Request):
     return templates.TemplateResponse(name="homes/standards.html"
                                       , context={"request":request})
 
@@ -26,3 +26,9 @@ async def home_list():
     # return 0
     html = "<body> <h2>It's Home List.</h2> </body>"
     return html
+
+# /homes/parameters_query -> /homes/parameters_query.html 호출
+@router.get("/parameters_query")
+async def homes(request:Request):
+    return templates.TemplateResponse(name="homes/parameters_query.html"
+                                      , context={"request":request})
