@@ -17,12 +17,16 @@ async def insert(request:Request):
 # 회원 가입 Login /users/insert -> users/login.html
 @router.get("/logins")    # 주로 2단계까지만 연결
 async def insert(request:Request):
+    dict_details = dict(request.query_params)
+    print(dict_details)
     return templates.TemplateResponse(name="users/logins.html"
                                       , context={"request":request})
 
 # 회원 리스트 /users/list -> users/lists.html
 @router.get("/list")
 async def insert(request:Request):
+    dict_details = dict(request.query_params)
+    print(dict_details)
     return templates.TemplateResponse(name="users/lists.html"
                                       , context={"request":request})
     
@@ -30,11 +34,15 @@ async def insert(request:Request):
 # path parameters : /users/read/id or /users/read/uniqe_name
 @router.get("/read/{object_id}")
 async def insert(request:Request, object_id):
+    dict_details = dict(await request.form())
+    print(dict_details)
     return templates.TemplateResponse(name="users/reads.html"
                                       , context={"request":request})
     
 # 회원 리스트 /users/list -> users/lists.html
 @router.post("/list")
 async def insert(request:Request):
+    dict_details = dict(request.query_params)
+    print(dict_details)
     return templates.TemplateResponse(name="users/lists.html"
                                       , context={"request":request})
